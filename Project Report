@@ -1,0 +1,50 @@
+Learned or applied:
+
+1. Data Cleaning methods to remove 0 values in Year of publication in Regression based model
+2. Split data into random number of users who rated HIGH values to books for more realistic evaluation of  recommender model(this method of splitting can be used to 	evaluate all the models)
+3. Implemented my own code for calculating precision and recall values for individual user.
+4. publishers (Not Avail) values for 633 entries removed
+5. authors (Not Available) values also removed
+6. removed locations of user for which country (n/a)
+7. Separated rating data into explicit and implicit data
+8. Performance of prototype regression model without "title" as a feature:
+	max_error: 12.6, rems: 1.8
+9. I have predicted actual value from test data to check the deviation of actual and predicted rating, and
+   observed a pattern that predicted ratings are always less with some deviation and that is why used cal()
+   function rather that floor function to minimize deviation further
+10. After including "title" as a feature:
+	max_error: 7.55 rmse:1.9
+11. Employed various methods for converting implicit rating data from SFrame to dictionary:
+    1| Brute force, first selecting unique users and then using for loop to add items to dictionary one at a time (TOO SLOW)
+    2| Quiet same as above used unstack rather than second for loop(still slow)
+    3| Did some brainstorming and got idea to unstack the whole frame precomputation and use some SFrame data manipulation techniques to add items to dictionary, then 	      save dictionary in numpy file(VERY FAST)
+12. Implemented Pearson and Euclid functions to measure similarity b/s users, also implemented function to compute similarity of one user with every other user in the 	   dataset.
+13. RECOMMENDING ITEMS:
+    I could just have recommended ratings from the most similar users but that makes the prediction biased towards single user's taste, instead I have used the       	  similarities of individual user as weight metric and made prediction on the basis of (val=sim*their rating for a movie user haven't seen yet). Sum of all these   	  (vals) are added to get final score for a movie.
+    -To normalize the final score I have divided it by sum of similarities, so that movie rated by more user would not dominate.
+14. Book function iterates over all the users present in data. I have modified this function to search over for only top (n) most similar users
+15. Implemented cooccurrence matrix but its too slow, need to find some way to increase efficiency
+16. Did two mistakes while computing cooccurrence matrix, 1)didn't calculate values to apply jaccard similarity 2)Also counted books that user don't like
+17. Most of the book pairs have only 1 person in common(one pair has 13 users in common)
+18. co_dict data TOO SPARSE, 0.95 of original rating data maybe I have to adopt parallelism to compute more
+    data.
+19. Combined data is quiet large with more than one million values, therefore I increased the number of max iterations to find the optimal RMSE value
+20. Model trained on Implicit data (predicted using Linear regression model) is showing very good both with and without side data.
+21. Ranking Factorization surpassed even imp_side model by a huge leap, its precision/recall curve is also
+    MUCH MORE smoother as compared to other models.(IT IS RATHER THE BEST ON SUCH REAL WORLD DATA)
+22. Tested Matrix Factorization on various datasets and choose the best one(ranking factorization on Implicit data). Now I just have to implement this one algorithm 	 on my own.
+23. Added additional functionality to Linear Regression model now the number of books specified are chosen
+    randomly from complete book data.
+24. Implemented rank factorization on implicit data with side data and evaluated it against rank_imp_model
+    (without side data). Both performs optimally and it is hard to say which one performs better, but as
+    the complexity of model increases on including side data, I am choosing model without side data.
+
+
+Other Ideas to employ for models:
+0. MOST OF THE VALUES IN RATINGS DATA ARE 0 I MUST EMPLOY LINEAR ALGEBRA TECHNIQUES TO FILL SOME OF THEM (MEAN, PRINCIPAL COMPONENT, ETC)
+1. Can change data members of class to private and increase stability.
+
+What needs to be done for project:
+1. The goal isn't just to implement some model on some data.The goal is to see what trends you can find, what stats are interesting.
+2. You want your results to tell a story, in addition to reporting the accuracy of your model
+3. Why you chose this technique, what mistakes you have made, what you learned, what data structures/tools came in handy, how your version performed against a       	standard implementation

@@ -1,0 +1,23 @@
+[sframe]
+version=0
+num_segments=0
+num_columns=8
+nrows=3496
+[column_names]
+0000=Iteration
+0001=Passes
+0002=Step size
+0003=Elapsed Time
+0004=Training-max_error
+0005=Validation-max_error
+0006=Training-rmse
+0007=Validation-rmse
+[column_files]
+0000=m_57e236ce21e4940d.sidx:0
+0001=m_57e236ce21e4940d.sidx:1
+0002=m_57e236ce21e4940d.sidx:2
+0003=m_57e236ce21e4940d.sidx:3
+0004=m_57e236ce21e4940d.sidx:4
+0005=m_57e236ce21e4940d.sidx:5
+0006=m_57e236ce21e4940d.sidx:6
+0007=m_57e236ce21e4940d.sidx:7

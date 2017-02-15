@@ -1,0 +1,13 @@
+[sframe]
+version=0
+num_segments=18446744073709551615
+num_columns=3
+nrows=716109
+[column_names]
+0000=user_id
+0001=book_id
+0002=ratings
+[column_files]
+0000=m_b70797eb18401069.sidx:0
+0001=m_b70797eb18401069.sidx:1
+0002=m_b70797eb18401069.sidx:2

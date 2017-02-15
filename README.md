@@ -16,17 +16,17 @@ Recommender Systems are hot research topics and they lie in the realm of Machine
 ## So, what's so special about this recommender system?
 Generally, most simplest of recommender systems are constructed based on one of the techniques mentioned above. But these recommender systems do not provide the right accuracy which is the most crucial aspect of recommender systems that are to be used in commercial applications. Inaccurate results can incurr significant loss and wastage of resources.
 Now there are some ways to increase accuracy like:
-### Get more data about user.
-### Use a better algorithm or switch to another technique.
-### Train models using different techniques and ensemble them together to improve results
+### -Get more data about user.
+### -Use a better algorithm or switch to another technique.
+### -Train models using different techniques and ensemble them together to improve results
 
 So, my dataset was static and I already had the cutting edge techniques for predictions, so I chose to ensemble models trained differently and output cumulative predictions.
 The five models that I made use of were:
-### Popularity based model
-### Classification based model
-### User similarity model
-### Cooccurence matrix model (Collaborative filtering based technique)
-### Matrix Factorization model
+### -Popularity based model
+### -Classification based model
+### -User similarity model
+### -Cooccurence matrix model (Collaborative filtering based technique)
+### -Matrix Factorization model
 
 ## Which libraries or tools are used in building this RS?
 Programming Language: Python 2.7
@@ -34,13 +34,15 @@ IDE: jupyter-notebook
 libraries: graphlab-create/SFrames | (Just for the Matrix factrization model, all other models are implemented from SCRATCH)
 
 ## What are all those files and folders there for?
-Folders: 
+### FOLDERS:: 
 ### book_data_clean|explicit_rating_data|implicit_rating_data|predicted_implicit_data|user_data_clean: 
 All of these folders contain the clean data derived from the noisy data that I was working with. Various preprocessing techniques were used to make this data usable. The information about what paritcular folder is about can be found in comments, also the different preprocessing techniques used to filter this data is mentioned in comments
 ### regression_model_data:
 This folder contains the first step for construction of classification based model which is to train explicit data on regression model. Data is stored in some format used by graphlab-create so it might not make sense but again comments can be referred to know what's that folder is doing.
           
-Notebooks: All the notebooks are in .ipynb format which can be directly viewed on github only without downloading or running them.
+### NOTEBOOKS:: 
+All the notebooks are in .ipynb format which can be directly viewed on github only without downloading or running them.
+
 ### Co-occurence Matrix Recommender.ipynb :
 As the name suggest this notebook contains the implementation of Co-occurence matrix based model.
 ### Data Preprocessing.ipynb : 

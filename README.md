@@ -48,10 +48,14 @@ Notebooks: All the notebooks are in .ipynb format which can be directly viewed o
 10. modelPerformance(1)(2)(3): A comparison between matrix factorization based models trained fon different data (implicit and explicit, with or without rankings)
 11. rating_dictionary: Another dictionary storing numpy arrays used in user-simlilarity model
 
-## Is this project of any use? Its not Website or mobile application?
-This python code is well modularized and can be integrated with any webapp or mobile application with some glue code. There is even no
-need to include the CSV files as the cleaned data is already stored in folders. graphlab-create and python 2.7 must be installed to execute this project.
+## Is this project of any use? Its not a Website or a mobile application?
+This python code is well modularized and can be integrated with any webapp or mobile application with some glue code and hence it can work as a Core Engine for your Book Recommending Website. There is even no need to include the CSV files as the cleaned data is already stored in folders and hence it won't consume much space. There is only one function call which takes as parameter a UserId and another parameter denoting wheater the user is a new user or an old user and ouput is well defined description about book with book's image(amazon url's are used to display images hence internet connection is required for displaying images)  
+-graphlab-create and python 2.7 must be installed to execute this project.
+
 CAUTION:
 Matrix Factorization model cannot be used directly as it was trained solely on graphlab-create and was quite large in size to be uploaded on github and hence the code using matrix factorization based model has been commented so that it do not hinder the execution of rest of the code.
 But, the output shown in the final notebook include predictions from Matrix Factorization model, so you can get a fair idea of what's this model is doing.
 
+## Is there any other cool aspect of this project?
+Yes, one feature of this Recommender System is that it can also be used for prediction for completely new users with no past rating history. Popularity based model and Classification based model will be used for making predictions for such users based on the characteristics of users like thier location etc.
+This feature is not a rare one, today almost every recommender system is capable of making predictions for new users but its definitely one of the strongest feature that a recommender system can provide.

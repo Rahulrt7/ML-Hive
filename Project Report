@@ -38,13 +38,3 @@ Learned or applied:
 24. Implemented rank factorization on implicit data with side data and evaluated it against rank_imp_model
     (without side data). Both performs optimally and it is hard to say which one performs better, but as
     the complexity of model increases on including side data, I am choosing model without side data.
-
-
-Other Ideas to employ for models:
-0. MOST OF THE VALUES IN RATINGS DATA ARE 0 I MUST EMPLOY LINEAR ALGEBRA TECHNIQUES TO FILL SOME OF THEM (MEAN, PRINCIPAL COMPONENT, ETC)
-1. Can change data members of class to private and increase stability.
-
-What needs to be done for project:
-1. The goal isn't just to implement some model on some data.The goal is to see what trends you can find, what stats are interesting.
-2. You want your results to tell a story, in addition to reporting the accuracy of your model
-3. Why you chose this technique, what mistakes you have made, what you learned, what data structures/tools came in handy, how your version performed against a       	standard implementation

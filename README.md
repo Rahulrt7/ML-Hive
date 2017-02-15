@@ -32,21 +32,22 @@ IDE: jupyter-notebook
 libraries: graphlab-create/SFrames | (Just for the Matrix factrization model, all other models are implemented from SCRATCH)
 
 ## What are all those files and folders there for?
-Folders: 1. book_data_clean|explicit_rating_data|implicit_rating_data|predicted_implicit_data|user_data_clean -> All of these folders contain the clean data derived from the noisy data that I was working with. Various preprocessing techniques were used to make this data usable. The information about what paritcular folder is about can be found in comments, also the different preprocessing techniques used to filter this data is mentioned in comments
-          2. regression_model_data -> This folder contains the first step for construction of classification based model which is to train explicit data on regression model. Data is stored in some format used by graphlab-create so it might not make sense but again comments can be referred to know what's that folder is doing.
+Folders: 
+-1. book_data_clean|explicit_rating_data|implicit_rating_data|predicted_implicit_data|user_data_clean -> All of these folders contain the clean data derived from the noisy data that I was working with. Various preprocessing techniques were used to make this data usable. The information about what paritcular folder is about can be found in comments, also the different preprocessing techniques used to filter this data is mentioned in comments
+-2. regression_model_data -> This folder contains the first step for construction of classification based model which is to train explicit data on regression model. Data is stored in some format used by graphlab-create so it might not make sense but again comments can be referred to know what's that folder is doing.
           
 Notebooks: All the notebooks are in .ipynb format which can be directly viewed on github only without downloading or running them.
-1. Co-occurence Matrix Recommender.ipynb : As the name suggest this notebook contains the implementation of Co-occurence matrix based model.
-2. Data Preprocessing.ipynb : All the preprocessing steps taken to clean data for usability are employed in this notebook.
-3. Final Notebook.ipynb : This notebook contains the code assembled from all other distinct notebooks i.e. this is where ENSEMbLING of all 5 models is performed. This notbook alone with the required data is enough for using this model.
-4. Popularity.ipynb : Contains code for popularity based model.
-5. Predicting Implicit Values.ipynb : Some play around code for increasing accuracy of the model. Comments can be referred for the use of this code in improving accuracy of the model.
-6. Project Report: A brief info of the challenges I faced and tricks i have used to make best predictions.
-7. Regression Based Recommender.ipynb : Code for classification based model.
-8. User-Similarity model.ipynb : Code for User-similarity based model 
-9. cooccurrence dict.npy: A python dictionary storing numpy arrays, which are used in cooccurence model
-10. modelPerformance(1)(2)(3): A comparison between matrix factorization based models trained fon different data (implicit and explicit, with or without rankings)
-11. rating_dictionary: Another dictionary storing numpy arrays used in user-simlilarity model
+-1. Co-occurence Matrix Recommender.ipynb : As the name suggest this notebook contains the implementation of Co-occurence matrix based model.
+-2. Data Preprocessing.ipynb : All the preprocessing steps taken to clean data for usability are employed in this notebook.
+-3. Final Notebook.ipynb : This notebook contains the code assembled from all other distinct notebooks i.e. this is where ENSEMbLING of all 5 models is performed. This notbook alone with the required data is enough for using this model.
+-4. Popularity.ipynb : Contains code for popularity based model.
+-5. Predicting Implicit Values.ipynb : Some play around code for increasing accuracy of the model. Comments can be referred for the use of this code in improving accuracy of the model.
+-6. Project Report: A brief info of the challenges I faced and tricks i have used to make best predictions.
+-7. Regression Based Recommender.ipynb : Code for classification based model.
+-8. User-Similarity model.ipynb : Code for User-similarity based model 
+-9. cooccurrence dict.npy: A python dictionary storing numpy arrays, which are used in cooccurence model
+-10. modelPerformance(1)(2)(3): A comparison between matrix factorization based models trained fon different data (implicit and explicit, with or without rankings)
+-11. rating_dictionary: Another dictionary storing numpy arrays used in user-simlilarity model
 
 ## Is this project of any use? Its not a Website or a mobile application?
 This python code is well modularized and can be integrated with any webapp or mobile application with some glue code and hence it can work as a Core Engine for your Book Recommending Website. There is even no need to include the CSV files as the cleaned data is already stored in folders and hence it won't consume much space. There is only one function call which takes as parameter a UserId and another parameter denoting wheater the user is a new user or an old user and ouput is well defined description about book with book's image(amazon url's are used to display images hence internet connection is required for displaying images)  

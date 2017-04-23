@@ -9,7 +9,7 @@ Learned or applied:
 6. removed locations of user for which country (n/a)
 7. Separated rating data into explicit and implicit data
 8. Performance of prototype regression model without "title" as a feature:
-	max_error: 12.6, rems: 1.8
+	max_error: 12.6, rmse: 1.8
 9. I have predicted actual value from test data to check the deviation of actual and predicted rating, and
    observed a pattern that predicted ratings are always less with some deviation and that is why used cal()
    function rather that floor function to minimize deviation further

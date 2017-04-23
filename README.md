@@ -1,7 +1,7 @@
 # Book Recommendation System
 
 ## What are Recommender Systems?
-In layman terms, a recommender systems cam predict somthing about a user based on user's past activities. Here the activity can be - a purchase history of the user, a book rated by some user, a movie rated by user on netflix. Example of Recommender System is the recommended products that amazon website shows to its users based on their past purchases.
+In layman terms, a recommender systems can predict something about a user based on user's past activities. Here the activity can be - a purchase history of the user, a book rated by some user, a movie rated by user on netflix. Example of Recommender System is the recommended products that amazon website shows to its users based on their past purchases.
 
 ## What's goes into a recommender system and what comes out on the other side?
 It works in two phases 

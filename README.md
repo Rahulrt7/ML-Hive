@@ -24,8 +24,8 @@ So, my dataset was static and I already had the cutting edge techniques for pred
 The five models that I made use of were:
 ### -Popularity based model
 ### -Classification based model
-### -User similarity model
-### -Cooccurence matrix model (Collaborative filtering based technique)
+### -User similarity model (Collaborative filtering based technique)
+### -Cooccurence matrix model 
 ### -Matrix Factorization model
 
 ## Which libraries or tools are used in building this RS?

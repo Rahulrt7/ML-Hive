@@ -24,7 +24,7 @@ So, my dataset was static and I already had the cutting edge techniques for pred
 The five models that I made use of were:
 ### -Popularity based model
 ### -Classification based model
-### -User similarity model (Collaborative filtering based technique)
+### -User based Collaborative Filtering model
 ### -Cooccurence matrix model 
 ### -Matrix Factorization model
 

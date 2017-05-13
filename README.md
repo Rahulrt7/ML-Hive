@@ -1,5 +1,15 @@
 # Book Recommendation System
 
+## Dependencies
+- graphlab-create
+- SFrames
+- numpy
+- matplotlib
+
+## Running the code
+Final+Notebook.py contains the executable code that can be run directly through terminal. The script will call suggest() function which maps all the outputs from different models together. You can adjust that function and refer to the comments to know more about the parameters of function. The output of this function call will be information about five recommended books and their cover image.
+[Look at Final_Notebook.ipynb notebook to know more about predicted output format]
+
 ## What are Recommender Systems?
 In layman terms, a recommender systems can predict something about a user based on user's past activities. Here the activity can be - a purchase history of the user, a book rated by some user, a movie rated by user on netflix. Example of Recommender System is the recommended products that amazon website shows to its users based on their past purchases.
 
